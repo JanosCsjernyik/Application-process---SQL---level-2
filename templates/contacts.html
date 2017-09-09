@@ -5,17 +5,19 @@
         <title>Document</title>
     </head>
     <body>
-        <h1>Mentors in countries</h1>
+        <h1>Contacts in schools</h1>
         <br>
         <table>
             <tr>
-                <th>Country</th>
-                <th>Count</th>
+                <th>School</th>
+                <th>First name</th>
+                <th>Last name</th>
             </tr>
             {% for i in query %}
             <tr>
-                <td>{{ i['country'] }} </td>
-                <td>{{ i['count'] }} </td>
+                <td>{{ i['name'] }} </td>
+                <td>{{ i['first_name'] }} </td>
+                <td>{{ i['last_name'] }} </td>                
             </tr>
             {% endfor %}
         </table>

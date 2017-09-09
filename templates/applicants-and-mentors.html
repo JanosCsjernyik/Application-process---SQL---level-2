@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Applicants and mentors</h1>
+        <br>
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Application code</th> 
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            {% for i in query %}
+            <tr>
+                <td>{{ i['first_name_applicant'] }} </td>
+                <td>{{ i['application_code'] }} </td>
+                <td>{{ i['first_name'] }} </td>
+                <td>{{ i['last_name'] }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

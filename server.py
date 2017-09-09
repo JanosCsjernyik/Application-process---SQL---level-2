@@ -28,5 +28,24 @@ def route_mentors_by_country():
     return render_template('mentors-by-country.html', query=query)
 
 
+@app.route('/contacts')
+def route_contacts():
+    query = database_handlre.query_select(queries.CONTACTS)
+    return render_template('contacts.html', query=query)
+
+
+@app.route('/applicants')
+def route_applicants():
+    query = database_handlre.query_select(queries.APPLICANTS)
+    return render_template('applicants.html', query=query)
+
+
+@app.route('/applicants-and-mentors')
+def route_applicants_and_mentors():
+    query = database_handlre.query_select(queries.APPLICANTS_AND_MENTORS)
+    print(query)
+    return render_template('applicants-and-mentors.html', query=query)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
