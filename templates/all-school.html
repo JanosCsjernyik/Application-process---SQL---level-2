@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Mentors and school</h1>
+        <br>
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th> 
+                <th>School</th>
+                <th>Country</th>
+            </tr>
+            {% for i in query %}
+            <tr>
+                <td>{{ i['first_name'] }} </td>
+                <td>{{ i['last_name'] }} </td>
+                <td>{{ i['name'] }} </td>
+                <td>{{ i['country'] }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

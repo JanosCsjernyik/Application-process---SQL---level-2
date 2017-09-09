@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Mentors in countrys</h1>
+        <br>
+        <table>
+            <tr>
+                <th>Country</th>
+                <th>Count</th>
+            </tr>
+            {% for i in query %}
+            <tr>
+                <td>{{ i['country'] }} </td>
+                <td>{{ i['count'] }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
